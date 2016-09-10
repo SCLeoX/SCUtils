@@ -24,7 +24,7 @@ replaceAll('<h5>'            , '[size=3][b]'    );
 replaceAll('</h5>'           , '[/b][/size]\n'  );
 replaceAll('<ol>'            , ''               );
 replaceAll('</ol>'           , '\n'             );
-replaceAll('<li>'            , '[size=3] • [b]' );
+replaceAll('<li>'            , '[size=3] - [b]' );
 replaceAll('</li>'           , '[/b][/size]\n'  );
 replaceAll('<p>'             , '[size=3]'       );
 replaceAll('</p>'            , '[/size]\n\n'    );
