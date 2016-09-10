@@ -1,0 +1,5 @@
+node_modules
+/toUBB/out.ubb
+/.idea
+/out
+/SCUtils.iml

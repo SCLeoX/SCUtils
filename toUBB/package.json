@@ -1,0 +1,16 @@
+{
+  "name": "scutils-to-ubb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SCLeo",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "html-entities": "^1.2.0",
+    "markdown-it": "^7.0.1"
+  }
+}

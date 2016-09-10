@@ -1,0 +1,94 @@
+name: SCUtils
+main: net.minegeck.plugins.scutils.Main
+version: 0.0.1
+description: SCUtils
+author: SCLeo
+load: POSTWORLD
+commands:
+  class:
+    aliases: [uclass, scuclass]
+    permission: scutils.command.class
+  cs:
+    aliases: [ucs, scucs, scucommandsequence, ucommandsequence, commandsequence]
+    permission: scutils.command.cs
+  data:
+    aliases: [udata, scudata]
+    permission: scutils.command.data
+  exec:
+    aliases: [uexec, scuexec]
+    permission: scutils.command.exec
+  explain:
+    aliases: [uexplain, scuexplain]
+    permission: scutils.command.explain
+  uhelp:
+    aliases: [scuhelp]
+    permission: scutils.command.help
+  nocmd:
+    aliases: [unocmd, scunocmd]
+    permission: scutils.command.nocmd
+  qs:
+    aliases: [uqs, scuqs, scuqueryselector, uqueryselector, querselector]
+    permission: scutils.command.qs
+  rcs:
+    aliases: [urcs, scurcs, scuruncommandsequence, uruncommandsequence, runcommandsequence]
+    permission: scutils.command.rcs
+  select:
+    aliases: [uselect, scuselect]
+    permission: scutils.command.select
+  tokenize:
+    aliases: [utokenize, scutokenize]
+    permission: scutils.command.tokenize
+  velocity:
+    aliases: [uvelocity, scuvelocity, vel]
+    permission: scutils.command.velocity
+
+permissions:
+  scutils.*:
+    children:
+      scutils.command.*: true
+      scutils.globalqueryselector: true
+      scutils.overridernocmd: true
+
+  scutils.command.*:
+    children:
+      scutils.command.class: true
+      scutils.command.cs: true
+      scutils.command.data: true
+      scutils.command.exec: true
+      scutils.command.explain: true
+      scutils.command.help: true
+      scutils.command.nocmd: true
+      scutils.command.qs: true
+      scutils.command.rcs: true
+      scutils.command.select: true
+      scutils.command.tokenize: true
+      scutils.command.velocity: true
+
+    scutils.command.class:
+      default: op
+    scutils.command.cs:
+      default: op
+    scutils.command.data:
+      default: op
+    scutils.command.exec:
+      default: op
+    scutils.command.explain:
+      default: op
+    scutils.command.help:
+      default: op
+    scutils.command.nocmd:
+      default: op
+    scutils.command.qs:
+      default: op
+    scutils.command.rcs:
+      default: op
+    scutils.command.select:
+      default: op
+    scutils.command.tokenize:
+      default: op
+    scutils.command.velocity:
+      default: op
+    scutils.globalqueryselector:
+      default: op
+    scutils.overridernocmd:
+      default: op
