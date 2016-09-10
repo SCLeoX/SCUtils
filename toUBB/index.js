@@ -7,13 +7,16 @@ const $ = cheerio.load(content);
 $('code').each(function() {
   const $this = $(this);
   let html = $this.html();
-  $this.html(html.substring(0, html.length - 1).split('\n').join('--##NEWLINE##--'));
+  if (html[html.length - 1] === '\n') {
+    html = html.substring(0, html.length - 1);
+  }
+  $this.html(html.split('\n').join('--##NEWLINE##--'));
 });
 content = he.decode($.html());
 const replaceAll = (a, b) => content = content.split(a).join(b);
 replaceAll('\n'              , ''               );
 replaceAll('<h1>'            , '[size=6][b]'    );
-replaceAll('</h1>'           , '[/b][/size]\n\n');
+replaceAll('</h1>'           , '[/b][/size]\n'  );
 replaceAll('<h2>'            , '[size=6][b]'    );
 replaceAll('</h2>'           , '[/b][/size]\n'  );
 replaceAll('<h3>'            , '[size=5][b]'    );
